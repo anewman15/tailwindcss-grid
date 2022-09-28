@@ -26,7 +26,7 @@ It is possible to build multi column layouts using Tailwind with its Flexbox cla
     `npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch`
  4. Start Live Server and navigate to the port number. Or just click on the `Go Live` button at the bottom right corner of the your code editor:
 
-    ![go-live](./images/tailwindcss-0.png)
+    ![go-live](https://imgbox.com/8wejAySA)
 
  ## Basic Example
  First, we have the following `index.html` document that is linked to the TailwindCSS styles in the `<head>`:
@@ -93,7 +93,7 @@ Let's add three explicit columns:
 ```
 Now, we have all the `div`s flowed into 3 columns according to Grid Formatting Context:
 
-![tailwindcss-1](./images/tailwindcss-1.png)
+![tailwindcss-1](https://imgbox.com/zBlz5lVX)
 
 Notice that `grid-cols-3` just divides the screen into 3 equal parts of each `1fr` as with: `grid-template-columns: repeat(3, minmax(0, 1fr));`.
 
@@ -107,7 +107,7 @@ Let's add some gap with `gap-{size}` class. We have to set it to the grid contai
 
 Now we have a gap between the children `div`s:
 
-![tailwindcss-3](./images/tailwindcss-3.png)
+![tailwindcss-3](https://imgbox.com/LBgFEn71)
 
 
 ### Responsive Column Numbers
@@ -120,7 +120,7 @@ We can add columns at larger breakpoints:
 
 Here, we're using Tailwind's default breakpoints at `md:	768px` and `lg:	1024px`. We can see the number of columns increasing at `768px` and `1024px`:
 
-![tailwindcss-4](./images/tailwindcss-4.gif)
+![tailwindcss-4](https://imgbox.com/URyFR26w)
 
 It's important to notice that Tailwind's responsive classes such as `md` and `lg` do not represent screensizes, but rather mobile-first breakpoints. So `grid-cols-3` lays out 3 columns for all screen sizes, but since column numbers change after `md` we get 5 columns **after** that screen size. And because it changes again after `lg` we get 8. It doesn't change afterwards, so we continue getting 8 columns even in `xl`, `2xl` screen sizes.
 
@@ -136,7 +136,7 @@ Below, we place the first `div` as a navbar. We are doing this with `col-span-{n
 </div>
 ```
 
-![tailwindcss-5](./images/tailwindcss-5.gif)
+![tailwindcss-5](https://imgbox.com/kGQVHXQ0)
 
 We can refactor the above `div` as:
 
@@ -185,7 +185,7 @@ Let's see an instance of it with the fourth `div`:
 </div>
 ```
 
-![tailwindcss-6](./images/tailwindcss-6.png)
+![tailwindcss-6](https://imgbox.com/8zR8WbGy)
 
 As we can see, at `lg` and onward the fourth `div` starts at column four and spans two columns to the right.
 
@@ -211,7 +211,7 @@ Now, we can go ahead and set the last `div` to become a footer. This footer will
 ```
 Here, `row-start-5` tells the footer to be placed to the bottom row. It looks like this:
 
-![tailwindcss-7](./images/tailwindcss-7.gif)
+![tailwindcss-7](https://imgbox.com/3Shx7cBW)
 
 ### Span Rows
 We can go further and make it more structured. Let's make the second `div` span the left side of the grid - between the navbar and the footer. We can do this by choosing the second row as the starting point of the `div` and ending at 5:
@@ -224,7 +224,7 @@ We can go further and make it more structured. Let's make the second `div` span 
 
 We have it shaping into a better website layout:
 
-![tailwindcss-8](./images/tailwindcss-8.gif)
+![tailwindcss-8](https://imgbox.com/aOfVsakl)
 
 ## Reorder Regions
 We can change the order of a region by altering the the value of `n` in `row-start-{n}` and `col-start-{n}`. The second `div` could be an ad section which we want to display at the bottom on smaller screens and at the top on larger screens. Let's set its order at smaller screens first and then change it at `md`:
@@ -237,7 +237,7 @@ We can change the order of a region by altering the the value of `n` in `row-sta
 
 We have something looking like this:
 
-![tailwindcss-9](./images/tailwindcss-9.gif)
+![tailwindcss-9](https://imgbox.com/zz1DI0Xi)
 
 And the final `index.html` looks like this:
 
